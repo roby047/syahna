@@ -19,4 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('products','API\ProductController@all');
 Route::post('checkout', 'API\CheckoutController@checkout');
-Route::get('transactions/{id}', 'API\TransactionController@get');
+// Route::get('transactions/{id}', 'API\TransactionController@get');    // I already paid gak jalan di vue
+
+Route::post('transactions/{id}', 'API\TransactionController@get');
